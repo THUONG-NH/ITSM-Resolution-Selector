@@ -232,6 +232,14 @@
             placeholder="Any additional steps or context"
           ></textarea>
         </div>
+        <div class="form-group">
+          <label>Technician Infomation</label>
+          <textarea
+            id="resolution-technician"
+            rows="3"
+            placeholder="Technician information (name, contact, department)"
+          ></textarea>
+        </div>
       </div>
 
       <div class="form-section">
@@ -623,6 +631,10 @@
               value: document.getElementById("resolution-notes").value,
             },
             {
+              label: "Technician",
+              value: document.getElementById("resolution-technician").value,
+            },
+            {
               label: "Resolution Status",
               value:
                 document.getElementById("resolution-status").options[
@@ -645,6 +657,9 @@
               const row = resolutionBody.insertRow();
               const labelCell = row.insertCell(0);
               const valueCell = row.insertCell(1);
+              labelCell.style.fontWeight = 'bold';
+              labelCell.style.backgroundColor = '#e4e9f2';
+              labelCell.style.width = '25%';
               labelCell.textContent = field.label;
               valueCell.textContent = field.value;
             }
