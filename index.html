@@ -245,11 +245,6 @@
         <label>Additional Resolution Notes</label>
         <textarea id="resolution-notes" rows="3" placeholder="Any additional steps or context"></textarea>
       </div>
-      <div class="form-group">
-        <label>Technician Infomation</label>
-        <textarea id="resolution-technician" rows="3"
-          placeholder="Technician information (name, contact, department)">Nguyễn Hoài Thương (Mr.) - thuong.nh.fpt </textarea>
-      </div>
     </div>
 
     <div class="form-section">
@@ -265,6 +260,11 @@
       <div class="form-group">
         <label>Final Outcome</label>
         <textarea id="final-outcome" rows="3" placeholder="Describe the final result of the resolution"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Technician Infomation</label>
+        <textarea id="resolution-technician" rows="3"
+          placeholder="Technician information (name, contact, department)">Nguyễn Hoài Thương (Mr.) - thuong.nh.fpt </textarea>
       </div>
     </div>
 
@@ -302,7 +302,6 @@
             "Lỗi quạt tản nhiệt",
           ],
           printer: [
-            "Cài máy in",
             "Kẹt giấy",
             "Chất lượng in kém",
             "Kết nối mạng",
@@ -374,13 +373,14 @@
             "Không thể mở file",
             "Lỗi macro trong Excel",
           ],
-          custom: [
+          applications: [
             "Lỗi ứng dụng",
-            "Vấn đề tích hợp",
             "Cấu hình",
             "Lỗi truy cập",
             "Xung đột phần mềm",
             "Ứng dụng bị treo",
+            "Cài đặt máy in",
+            "Cài đặt máy scan",
           ],
         },
         diagnosticActions: {
@@ -392,7 +392,7 @@
             "Kiểm tra quyền file",
             "Chạy ở chế độ an toàn",
           ],
-          custom: [
+          applications: [
             "Phân tích nhật ký lỗi",
             "Kiểm tra tương thích hệ thống",
             "Kiểm tra cấu hình",
@@ -410,7 +410,7 @@
             "Mở file bằng trình đọc khác",
             "Vô hiệu hóa macro",
           ],
-          custom: [
+          applications: [
             "Cập nhật bản vá ứng dụng",
             "Cấu hình lại tích hợp",
             "Đặt lại cấu hình",
@@ -636,19 +636,19 @@
             value: document.getElementById("resolution-notes").value,
           },
           {
-            label: "Technician",
-            value: document.getElementById("resolution-technician").value,
-          },
-          {
             label: "Resolution Status",
             value:
-              document.getElementById("resolution-status").options[
-                document.getElementById("resolution-status").selectedIndex
-              ].text,
+            document.getElementById("resolution-status").options[
+              document.getElementById("resolution-status").selectedIndex
+            ].text,
           },
           {
             label: "Final Outcome",
             value: document.getElementById("final-outcome").value,
+          },
+          {
+            label: "Technician",
+            value: document.getElementById("resolution-technician").value,
           },
         ];
 
