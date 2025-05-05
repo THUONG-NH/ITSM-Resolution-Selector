@@ -288,21 +288,21 @@
     <div class="form-section">
       <h2>4. Final Result</h2>
       <div class="form-group">
-        <label>Resolution Status</label>
-        <select id="resolution-status">
-          <option value="resolved">Fully Resolved</option>
-          <option value="partial">Partially Resolved</option>
-          <option value="pending">Pending Further Action</option>
-        </select>
-      </div>
-      <div class="form-group">
         <label>Final Outcome</label>
         <textarea id="final-outcome" rows="3" placeholder="Describe the final result of the resolution"></textarea>
       </div>
       <div class="form-group">
         <label>Technician Information</label>
         <textarea id="resolution-technician" rows="3"
-          placeholder="Technician information (name, contact, department)">Nguyễn Hoài Thương (Mr.) - thuong.nh.fpt </textarea>
+        placeholder="Technician information (name, contact, department)">Nguyễn Hoài Thương (Mr.) - thuong.nh.fpt </textarea>
+      </div>
+      <div class="form-group">
+        <label>Resolution Status</label>
+        <select id="resolution-status">
+          <option value="resolved">Fully Resolved</option>
+          <option value="partial">Partially Resolved</option>
+          <option value="pending">Pending Further Action</option>
+        </select>
       </div>
     </div>
     <div class="action-buttons">
@@ -786,18 +786,18 @@
           value: document.getElementById("resolution-notes").value,
         },
         {
-          label: "Resolution Status",
-          value: document.getElementById("resolution-status").options[
-            document.getElementById("resolution-status").selectedIndex
-          ].text,
-        },
-        {
           label: "Final Outcome",
           value: document.getElementById("final-outcome").value,
         },
         {
           label: "Technician",
           value: document.getElementById("resolution-technician").value,
+        },
+        {
+          label: "Resolution Status",
+          value: document.getElementById("resolution-status").options[
+            document.getElementById("resolution-status").selectedIndex
+          ].text,
         },
       ];
 
